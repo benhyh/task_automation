@@ -4,14 +4,14 @@ from datetime import datetime
 # Import a special helper that lets us schedule tasks (like setting an alarm clock)
 import schedule
 
-# Import a tool that lets our program wait or sleep (like taking a short nap)
+# Import a tool that lets our program wait or sleep (like taking a short nap) 
 import time
 
 # Create a TaskScheduler class - think of it as an alarm clock for our program
 class TaskScheduler():
     # When we create a new scheduler, we set up an empty list to store our alarms
     def __init__(self):
-        # This is like a notebook where we write down all our scheduled tasks
+        # This is like a notebook where we write down all our scheduled tasks.
         self.scheduled_tasks = {}
     
     # This is how we add a new alarm to our clock
