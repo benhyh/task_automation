@@ -1,5 +1,5 @@
 # Import tools that help us watch folders for any changes (like a security camera for files)
-from watchdog.observers import Obsever  # Typo: should be 'Observer'
+from watchdog.observers import Observer  
 # Import a special tool that helps us respond when files change
 from watchdog.events import FileSystemEventHandler
 
@@ -12,10 +12,11 @@ class AutomationRule:
         # An action to take when those files change (like what to do when we see something on our camera)
         self.action = action
 
+
 # Create a FolderWatcher class - think of it as a security guard that watches folders and follows rules
 class FolderWatcher(FileSystemEventHandler):
     # When we hire a new security guard, we give them a list of rules to follow
-    def __init(self, rules):  # Typo: missing underscore in __init__
+    def __init__(self, rules): 
         # Store the list of rules so our guard knows what to do
         self.rules = rules
         

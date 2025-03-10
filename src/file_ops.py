@@ -7,6 +7,10 @@ import shutil
 # Import a special tool that makes working with file paths easier (like a GPS for files)
 from pathlib import Path
 
+watch_folder = r'C:\Users\bhyh0\OneDrive\Desktop\2025\accelerator\phase-1\task_automation_suite\src\watch_folder'
+# so we either instantiate it or pass it in as an arg
+# in our use case, we pass it as an arg cause our watch_folder is dynamic
+
 # Create a FileManager class - think of it as a robot that organizes your files
 class FileManager:
     # When we create a new robot, we tell it which folder to watch
@@ -32,5 +36,8 @@ class FileManager:
                 ext_folder.mkdir(exist_ok=True)
                 
                 # Move the file to its proper folder (put the LEGO in the LEGO box)
-                # But there's a bug here! It should be shutil.move, not remove!
-                shutil.move(str(file), str(ext_folder / file.name))    
+                shutil.move(str(file), str(ext_folder / file.name)) 
+    
+    
+
+    

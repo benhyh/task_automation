@@ -40,4 +40,4 @@ class TaskManager():
         return self.tasks
     def complete_tasks(self, task_index: int):
         if 0 <= task_index < len(self.tasks):
-            self.tasks[task_index].completed = True     
+            self.tasks[task_index].completed = True

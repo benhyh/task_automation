@@ -18,6 +18,7 @@ class TaskScheduler():
     def add_scheduled_task(self, task, schedule_time):
         # Tell the schedule tool to run our task every day at the specific time
         # (Like telling your alarm: "Wake me up at 7:00 AM every day")
+
         schedule.every().day.at(schedule_time).do(task)
         
         # Write down this task in our notebook so we remember it
@@ -37,3 +38,5 @@ class TaskScheduler():
             self.run_pending_tasks()
             # Wait a little bit before checking again (like hitting snooze for 1 second)
             time.sleep(1)
+
+
